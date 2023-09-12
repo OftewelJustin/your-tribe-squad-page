@@ -1,0 +1,27 @@
+.card {
+    width: 20rem;
+    height: 30rem;
+    border-radius: 2rem;
+    background-color: pink;
+}
+
+.overlay {
+    display: none;
+    position: relative;
+}
+
+.card:hover .overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.516);
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.overlay p {
+    position: absolute;
+    bottom: 0;
+    right: 8rem;
+    font-size: 2rem;
+}
+
