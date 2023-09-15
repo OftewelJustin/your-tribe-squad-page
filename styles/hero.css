@@ -1,0 +1,48 @@
+.hero {
+    width: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack the elements vertically */
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--off-white);
+    font-weight: 300;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Media query for screens with a minimum width of 22.5em (360px and up) */
+@media only screen and (min-width: 22.5em) {
+    .hero {
+        margin: 2em 2em 2em 2em;
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 1.3rem;
+        width: 70%;
+    }
+}
+@media only screen and (min-width: 48em) {
+    .hero {
+        margin: 4em 6em 0em 6em;
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        width: 30%;
+
+    }
+
+}
+

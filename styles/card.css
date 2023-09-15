@@ -1,0 +1,37 @@
+.card {
+    width: 100%;
+    height: 60vh;
+    background-size: cover; /* This ensures the image covers the entire .card element */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents image repetition */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.card .content h2 {
+    transform: translate(0%, 200%);
+    font-weight: normal;
+    transition: transform 0.5s ease; /* Add a transition for smooth hover effect */
+}
+
+.card .content:hover h1 {
+    transform: translate(0%, 300%);
+    font-weight: normal;
+}
+
+
+.card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.26);
+    z-index: 1;
+}
