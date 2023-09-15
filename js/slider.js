@@ -51,20 +51,20 @@ const dragStop = () => {
 }
 
 const infiniteScroll = () => {
-    // If the carousel is at the beginning, scroll to the end
+    // Als de carousel op het begin is, scroll naar het eind
     if(carousel.scrollLeft === 0) {
         carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
         carousel.classList.remove("no-transition");
     }
-    // If the carousel is at the end, scroll to the beginning
+    // Als de carousel op het eind is, scroll naar het negin
     else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
         carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.offsetWidth;
         carousel.classList.remove("no-transition");
     }
 
-    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+    // Autoplay als de muis niet over de carousel hovered
     clearTimeout(timeoutId);
     if(!wrapper.matches(":hover")) autoPlay();
 }

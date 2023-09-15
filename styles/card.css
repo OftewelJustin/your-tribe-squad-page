@@ -108,7 +108,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/*zoet er voor dat de scrollbaar onzichtbaar is*/
+/*zorgt er voor dat de scrollbaar onzichtbaar is*/
 .carousel::-webkit-scrollbar {
     display: none;
 }
@@ -135,12 +135,15 @@ body {
     border-radius: 15px;
 }
 
+
+/*carousel laat alleen twee kaarten zijn bij een scherm kleiner dan 900px*/
 @media screen and (max-width: 900px) {
     .wrapper .carousel {
         grid-auto-columns: calc((100% / 2) - 9px);
     }
 }
 
+/*carousel laat één kaart zien bij een scherm kleiner dan 600px*/
 @media screen and (max-width: 600px) {
     .wrapper .carousel {
         grid-auto-columns: 100%;
