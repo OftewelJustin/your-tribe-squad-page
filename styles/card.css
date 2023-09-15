@@ -1,17 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; 
-    
+    font-family: "Poppins", sans-serif;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: grey;
+=}
+
 .card {
     position: relative;
     overflow: hidden;
-    width: 20rem;
-    height: 30rem;
-    border-radius: 2rem;
-    background-image: url(../assets/visitekaartje.gif);
-    background-size: 100% 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+    z-index: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
 }
 
 .overlay {
@@ -23,17 +34,16 @@
 	left: 0;
 	bottom: 0;
 	text-align: center;
-    border-radius: inherit;
     vertical-align: middle;
     transition: 0.6s;
 }
 
 .overlay p {
     display: inline-block;
-	margin-top: 26rem;
+	margin-top: 23.5rem;
     margin-right: 0.3rem;
 	font-size: 1.8rem;
-    font-weight: 550;
+    font-weight: 500;
     color: white;
 }
 
@@ -54,7 +64,86 @@
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 2rem;
 }
 
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    z-index: 1;
+}
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+    left: -22px;
+}
+.wrapper i:last-child{
+    right: -22px;
+}
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    /*zorgt ervoor dat de volledige kaartjes zichtbaar zijn bij het swipen*/
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+}
+
+/*zoet er voor dat de scrollbaar onzichtbaar is*/
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel.dragging .card {
+    cursor: grab;
+}
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .card {
+    scroll-snap-align: start;
+    height: 28rem;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
 
