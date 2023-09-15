@@ -72,13 +72,6 @@
 
 }
 
-.divider-nav {
-    border: 1px solid var(--off-white);
-    width: 60%;
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
 .sticky .navbar-content {
 }
 

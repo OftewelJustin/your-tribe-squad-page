@@ -2,7 +2,7 @@
 function changeBackgroundColor(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            document.body.style.backgroundColor = 'var(--yellow-color)'; // Change to your desired background color
+            document.body.style.backgroundColor = 'var(--off-white-color)'; // Change to your desired background color
         } else {
             document.body.style.backgroundColor = 'var(--primary-color)'; // Change back to the default background color when not in view
         }
