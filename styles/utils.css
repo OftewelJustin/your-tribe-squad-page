@@ -17,7 +17,10 @@
 
 .section-title {
     color: var(--off-white);
-    text-transform: uppercase;
+    margin-left: 15%;
+    margin-bottom: 1%;
+    font-size: 2.5rem;
+    font-weight: normal;
 }
 
 .section-spacer {
