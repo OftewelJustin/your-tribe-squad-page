@@ -2,6 +2,5 @@
 .container {
     display: flex;
     gap: 2em;
-    margin-bottom: 2em;
-    margin-left: 15%;
+    justify-content: center;
 }

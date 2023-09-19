@@ -5,6 +5,14 @@
     height: auto;
 }
 
+.our-cards {
+    margin: 0 10em 3em 10em;
+}
+
+.all-cards {
+    margin-bottom: 2em;
+}
+
 .card img {
     width: 100%;
     height: 100%;
@@ -26,7 +34,7 @@
 
 .overlay p {
     display: inline-block;
-    margin-top: 23.5rem;
+    margin-top: 21rem;
     margin-right: 0.3rem;
     font-size: 1.8rem;
     font-weight: 500;
@@ -55,14 +63,8 @@
     opacity: 1;
 }
 
-#section2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5em;
-}
 .wrapper {
-    max-width: 70rem;
+    max-width: 80rem;
     width: 100%;
     position: relative;
 }
